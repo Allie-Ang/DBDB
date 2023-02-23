@@ -21,8 +21,6 @@ To install, first install the necessary packages by running npm i, then seed the
 To test the API, use a REST client such as Insomnia or Postman and follow the routes outlined in the routes folder. Check out this [walkthrough video](https://drive.google.com/file/d/1jtIVle4gqkv2R0cMKkKRtBv_M7JsMtN5/view) for reference.
 ![Screenshot of application](./public/images/social-network-api.png)
 
-## Credits
-Collaborators: Amaryah Wolf
 
 ## License
 This application is covered under the MIT license.
@@ -32,6 +30,3 @@ This application is covered under the MIT license.
 
 ## Tests
 N/A
-
-## Questions
-For additional questions, find me on [github](https://github.com/amaryahwolf) or email me at amaryahwolf@gmail.com.
