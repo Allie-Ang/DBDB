@@ -28,7 +28,7 @@ module.exports = {
     createUser(req, res) {
         User.create(req.body)
             .then((dbUserData) => res.json(dbUserData))
-            .catch((err) => res.status(500).json(err));
+            .catch((err) => res.status(400).json(err));
     },
     // Update a user
     updateUser(req, res) {
@@ -52,7 +52,7 @@ module.exports = {
                     ? res.status(404).json({ message: 'No user with that ID' })
                     : Thought.deleteMany({ id: { $in: user.thoughts } })
             )
-            .then(() => res.json({ message: 'User and associated thoughts deleted!' }))
+            .then(() => res.json({ message: 'User & associated thoughts deleted!' }))
             .catch((err) => res.status(500).json(err));
     },
     // Add a friend to user's data
@@ -65,8 +65,8 @@ module.exports = {
         .then((user) =>
             !user   
                 ? res   
-                    .status(404)
-                    .json({ message: 'No user found with that ID.' })
+                    .status(400)
+                    .json({ message: 'No user found with that ID' })
                 : res.json(user)
         )
         .catch((err) => res.status(500).json(err));
@@ -82,7 +82,7 @@ module.exports = {
             !user
                 ? res
                     .status(404)
-                    .json({ message: 'No user found with that ID.' })
+                    .json({ message: 'No user found with that ID' })
                 : res.json(user)
         )
         .catch((err) => res.status(500).json(err));
